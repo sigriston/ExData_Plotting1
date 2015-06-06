@@ -1,3 +1,5 @@
 .Rproj.user
 .Rhistory
 .RData
+data/
+household_power_consumption.zip
