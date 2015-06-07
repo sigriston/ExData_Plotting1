@@ -200,12 +200,12 @@ genericplot <- function(plotfn) {
   invisible(dev.off())
 }
 
-plot2 <- function(dframe) {
+plot2b <- function(dframe) {
   plot(dframe$datetime,
        dframe$Global_active_power,
        type = "l",
        xlab = "",
-       ylab = "Global Active Power (kilowatts)")
+       ylab = "Global Active Power")
 }
 
 plot3b <- function(dframe) {
@@ -240,7 +240,7 @@ plotgrp <- function(dframe) {
 
 plot4 <- function(dframe) {
   par(mfcol = c(2, 2))
-  plot2(dframe)
+  plot2b(dframe)
   plot3b(dframe)
   plotvoltage(dframe)
   plotgrp(dframe)
