@@ -187,6 +187,8 @@ genericplot <- function(plotfn) {
   ##                  performs arbitrary plotting of data from dframe.
   ##
 
+  # A trick! We'll use the name of the plot function argument as the name
+  # of the output .png file! ;-)
   plotfnname <- deparse(substitute(plotfn))
   plotfile <- paste0(plotfnname, ".png")
 
