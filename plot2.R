@@ -1,14 +1,11 @@
-source("tidydata.R")
+source("genericplot.R")
 
-plot2 <- function() {
-  png("plot2.png", bg = "transparent")
-  dframe <- tidydata()
+plot2 <- function(dframe) {
   plot(dframe$DateTime,
        dframe$Global_active_power,
        type = "l",
        xlab = "",
        ylab = "Global Active Power (kilowatts)")
-  invisible(dev.off())
 }
 
-plot2()
+genericplot(plot2)

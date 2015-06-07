@@ -1,13 +1,10 @@
-source("tidydata.R")
+source("genericplot.R")
 
-plot1 <- function() {
-  png("plot1.png", bg = "transparent")
-  dframe <- tidydata()
+plot1 <- function(dframe) {
   hist(dframe$Global_active_power,
        col = "red",
        main = "Global Active Power",
        xlab = "Global Active Power (kilowatts)")
-  invisible(dev.off())
 }
 
-plot1()
+genericplot(plot1)

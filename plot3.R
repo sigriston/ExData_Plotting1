@@ -1,8 +1,6 @@
-source("tidydata.R")
+source("genericplot.R")
 
-plot3 <- function() {
-  png("plot3.png", bg = "transparent")
-  dframe <- tidydata()
+plot3 <- function(dframe) {
   plot(dframe$DateTime,
        dframe$Sub_metering_1,
        type = "l",
@@ -15,7 +13,6 @@ plot3 <- function() {
          c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
          lty = 1,
          col = c("black", "red", "blue"))
-  invisible(dev.off())
 }
 
-plot3()
+genericplot(plot3)
