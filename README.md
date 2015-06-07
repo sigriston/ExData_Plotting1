@@ -11,6 +11,36 @@ Please bear in mind they're not exactly identical because the original plots are
 | Plot 3 | ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) | ![generated plot 3](plot3.png) |
 | Plot 4| ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) | ![generated plot 4](plot4.png) |
 
+## How to run the solution scripts
+
+***IMPORTANT!*** First you need to install packages `dplyr`, `lubridate` and `downloader`, like this:
+
+```r
+install.packages("dplyr")
+install.packages("lubridate")
+install.packages("downloader")
+```
+
+Now you should be good to go. You can either source the script files in your R/Rstudio session:
+
+```r
+source("plot1.R")
+source("plot2.R")
+source("plot3.R")
+source("plot4.R")
+```
+
+Or you can even run them from the terminal using the `Rscript` command:
+
+```console
+$ Rscript plot1.R
+$ Rscript plot2.R
+$ Rscript plot3.R
+$ Rscript plot4.R
+```
+
+Either way, running the scripts will generate one of the `plot1.png`, `plot2.png`, `plot3.png`, `plot4.png` and they should be pretty close to identical to the versions already in this repo.
+
 ---
 
 ## Introduction
