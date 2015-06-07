@@ -208,7 +208,7 @@ plot2 <- function(dframe) {
        ylab = "Global Active Power (kilowatts)")
 }
 
-plot3 <- function(dframe) {
+plot3b <- function(dframe) {
   plot(dframe$datetime,
        dframe$Sub_metering_1,
        type = "l",
@@ -220,6 +220,7 @@ plot3 <- function(dframe) {
   legend("topright",
          c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
          lty = 1,
+         bty = "n",
          col = c("black", "red", "blue"))
 }
 
@@ -240,7 +241,7 @@ plotgrp <- function(dframe) {
 plot4 <- function(dframe) {
   par(mfcol = c(2, 2))
   plot2(dframe)
-  plot3(dframe)
+  plot3b(dframe)
   plotvoltage(dframe)
   plotgrp(dframe)
 }
